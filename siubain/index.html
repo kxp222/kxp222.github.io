@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style>
+		@media only screen and (min-width: 480px) {}
+		
+		.fa {
+			display: block;
+			flex-flow: row wrap;
+			padding: 20px;
+			background-color: blanchedalmond;
+		}
+		
+		.son1 {
+			float: left;
+			width: 200px;
+			height: 200px;
+			background-color: aqua;
+		}
+		.son3 {
+			float: left;
+			width: 200px;
+			height: 200px;
+			background-color: brown;
+		}
+		.son2 {
+			float: left;
+			width: 200px;
+			height: 200px;
+			background-color: blueviolet;
+		}
+		@media only screen and (max-width: 840px) {
+			.son1{
+				flex: 100%;
+			}
+			.son2{
+				flex: 100%;
+			}
+			.son3{
+				flex: 100%;
+			}
+		}
+	</style>
+
+	<body>
+		
+
+		<div class="fa">
+			<div class="son1">
+				xixhi
+			</div>
+			<div class="son2">
+				hahah
+			</div>
+			<div class="son3">
+				youyou
+			</div>
+		</div>
+	</body>
+
+</html>

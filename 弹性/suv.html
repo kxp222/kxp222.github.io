@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		body{
+			margin: 0 auto;
+		}
+		.clearfix{
+			content: " ";
+			clear: both;
+			display: block;
+		}
+		.top{
+			height: 20px;
+			
+		}
+		.fa{
+			margin-top:50px ;
+			margin: 0 auto;
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		img{
+			margin-left: 5px;
+			width: 95%;
+		}
+		.box{
+			margin-top:50px ;
+			display: flex;
+			flex-basis: 20%;
+			flex-direction: column;
+			text-align: center;
+			background-color: lightgrey;
+		}
+		
+		p{
+			margin-left: 7px;
+			color: orangered;
+			width: 90%;
+		}
+		img:hover{
+			transition: 1s;
+			transform: scale(1.01);
+			border:orangered solid;
+			margin: 5px;
+		}
+		
+		@media only screen and (min-width: 680px) {
+			.box{
+			flex-basis: 20%;
+			flex-direction: row;
+				flex-wrap: wrap;
+			}
+		}
+		@media only screen and (max-width: 680px) {
+			.box{
+				flex-basis: 50%;
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+			
+		}
+	</style>
+	<body>
+		
+		<div class="fa clearfix">
+			<div class="box">
+				<img src="img/link.jpg"/>
+				<p>2019款林肯大陆2.0T尊享版</p>
+				<p>厂商指导价：36.08-55.58万元</p>
+			</div>
+			<div class="box">
+				<img src="img/Q8.jpg"/>
+				<p>奥迪Q8</p>
+				<p>厂商指导价：76.88-109.76万元</p>
+			</div>
+			<div class="box">
+				<img src="img/报码.jpg"/>
+				<p>宝马3系列 2020款</p>
+				<p>厂商指导价：69.99-84.99万元</p>
+			</div>
+			<div class="box">
+				<img src="img/bc.jpg"/>
+				<p>奔驰GLC</p>
+				<p>厂商指导价：39.28-58.78万元</p>
+			</div>
+			<div class="box">
+				<img src="img/aodi.jpg"/>
+				<p>奥迪Q5L</p>
+				<p>厂商指导价：38.28-49.80万元</p>
+			</div>
+		</div>
+	</body>
+</html>
