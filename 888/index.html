@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+		<form id="myform">
+			姓名:<input type="text" />
+			性别：<input name="sex" type="radio" value="男"/>男
+		    	<input name="sex" type="radio" value="女"/>女
+		</form>
+		<button onclick="creatNewTr">哈哈</button>
+		<table id="tab" border="1" style="border-collapse: collapse;">
+			<tr>
+				<td>姓名</td>
+				<td>性别</td>
+				<td>
+					<a onclick="" href="">删除</a>
+				</td>
+			</tr>
+			<tr>
+				<td>张三</td>
+				<td>男</td>
+				<td>
+					<a onclick="" href=""></a>
+				</td>
+			</tr>
+		</table>
+		<script>
+			function creatNewTr(){
+				//找到表格，新建一行
+				var table=document.getElementById("tab");
+				var newTr=document.createElement("tr");
+				//新建第一格
+				//td2=document.createElement("td");
+				//td2.innerHTML=count;
+				//新建第三格
+				td3=document.createElement("td");
+				td3.innerHTML=document.myform.xingbie.value;
+				//第四格
+				td4=document.createElement("td");
+				td4.innerHTML="<a href='javascript:void(0);' onclick='deleteTr(this)'>删除</a>";
+				//绑定新建的行和格！不绑定没有用
+				table.append(newTr);
+				 newTr.appendChild(td1);
+				 newTr.appendChild(td2);
+				 newTr.appendChild(td3);
+				 newTr.appendChild(td4);
+				 
+				// count=count+1;
+			}
+			function deleteTr(obj){
+				var tr=obj.parentNode.parentNode;
+				var tbody=tr.parentNode;
+				tbody.removeChild(tr);
+				
+				obj.parentNode.parentNode.parentNode.removeChild(obj.parentNode.parentNode);//让obj的父亲的父亲的父亲删除obj的父亲的父亲--一行
+			}
+		</script>
+	</body>
+
+</html>

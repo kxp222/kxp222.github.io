@@ -54,13 +54,20 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		
 	</head>
 	<body>
+		<ul id="ull">
+			<a id="a1" href="#" >haha</a>
+			<button id="btn" onclick="bangding">nihao</button>
+		</ul>
 		<script>
-			var myname=prompt('请输入您的名字');
-			alert(myname);
+			function bangding(){
+				var obj=document.getElementById("a1");
+				obj.innerHTML=innerHTML+'hsha'
+				obj.addEventListener("click",function(){
+					alert("hahah");
+				})
+			}
 		</script>
-
 	</body>
 </html>
