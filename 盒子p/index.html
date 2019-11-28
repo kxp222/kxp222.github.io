@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			#div1{
+				
+			}
+			.box1{
+				height: 200px;
+				width: 200px;
+				background-color: red;
+			}
+		</style>
+		<script src="js/jquery-3.4.1.min.js"></script>
+	</head>
+	<body>
+		<div id="div1" class="box1">
+		</div>
+		<button onclick="myfunction()">动画效果</button>
+		<p id="p1">wo就是p</p>
+		<script>
+			//function creatP(){
+				
+				//$("#div1").append("<p>增加</p>");//用着一句话就实现了js四句话的效果
+				//$(".box1").append("<p>增加</p>");  所有的box1都可以一块增加
+				//$("div:first").append("<p>hahah</p>");
+				
+				//document.write("xinzengsuibian");//js与jquary 可以混合使用
+				//$("#div1").append();//增加在被选择元素的尾部（内部）
+				//$("#div1").after();//新增元素在被选元素的后面（外部）
+				//$("#p1").prepend("<span>xinzeng</span>");//备选元素的前面（内部）
+				//$("#div1").before();//被选元素的前面（外部）
+				function myfunction(){
+					$("#p1").fateOut(2000);//消失
+				    $("#p1").toggle(1000);//既可以hide又可以show
+				    $("#div1").fateTo("slow.0.78");
+				    $("#div").slideToggle();
+				    $("#div1").animate(){
+				    	//iquery效果
+				    }
+				    
+			}
+		</script>
+	</body>
+</html>
