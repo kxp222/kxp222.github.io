@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>孔子故里线上一条街</title>
-		<script src="jquery.js"></script>
+		<title>陋室不陋</title>
 		<style>
 			* {
 				margin: 0px;
@@ -17,12 +14,11 @@
 			
 			#flash {
 				/*根据图片的大小来设置外层div的大小*/
-				width: 520px;
-				height: 280px;
+				width: 1500px;
+				height: 720px;
 				margin: 0 auto;
 				position: relative;
 				/*设置div定位，方便之后图片及圆点位置的设定*/
-				border: 1px solid black;
 			}
 			
 			#flash img {
@@ -36,14 +32,16 @@
 				display: none;
 				/*设置所有图片隐藏，通过改变第一个图片的行间样式来使第一个图片显示*/
 			}
-			img hover:{
-				transform:scale(2,3);
+			
+			img hover: {
+				transform: scale(2, 3);
 			}
+			
 			#flash ul {
 				width: 150px;
 				height: 25px;
 				border-radius: 20px;
-				background-color: rgba(255, 255, 255, 0.5);
+				background-color: ;
 				position: absolute;
 				left: 35%;
 				bottom: 10%;
@@ -60,59 +58,66 @@
 			}
 			
 			#flash ul .li_1 {
-				background-color: #f40;
-				/*设置第一个圆点背景色为红色*/
+				background-color: #FFFFFF;
+				/*设置第一个圆点背景色为bai色*/
 			}
 			
-			#flash .span-r {
-				width: 50px;
-				height: 50px;
-				border-radius: 50%;
-				position: absolute;
-				right: 2%;
-				top: 45%;
-				background-color: rgba(255, 255, 255, 0.5);
+			.middle {
+				background-color: #D3D3D3;
+				padding: 20px 150px;
+			}
+			h1{
+				font-family: "wingdings 2";
+			}
+			button {
+				margin-top: 20px;
+				display: inline-block;
+				padding: 5px 10px;
+				margin-top: 5px;
+				font-size: 14px;
+				color: #B22222;
+				border: 2px solid  #B22222;
+				width: 200px;
+				height: 35px;
+				text-decoration: none;
+				transition: 0.4s;
 			}
 			
-			#flash .span-r span {
-				width: 100%;
-				height: 100%;
-				color: rgba(0, 0, 0, 0.5);
-				font-size: xx-large;
-				font-weight: 700;
-				line-height: 50px;
-				margin-left: 15px;
-				cursor: pointer;
+			button:hover {
+				background-color: transparent;
+				color: #FFFFFF;
+				background-color: #B22222;
+				transition: 0.4s;
 			}
 			
-			#flash .span-l {
-				width: 50px;
-				height: 50px;
-				border-radius: 50%;
-				position: absolute;
-				left: 2%;
-				top: 45%;
-				background-color: rgba(255, 255, 255, 0.5);
+			.body {
+				width: 900px;
+				margin: 0 auto;
+			}
+			.img{
+				width: 380px;
+			}
+			.text{
+				width: 350px;
+				padding: 5px;
+			}
+			.box1 {
+				width: ;
+				float: left;
 			}
 			
-			#flash .span-l span {
-				width: 100%;
-				height: 100%;
-				color: rgba(0, 0, 0, 0.5);
-				font-size: xx-large;
-				font-weight: 700;
-				line-height: 50px;
-				margin-left: 15px;
-				cursor: pointer;
+			.box2 {
+				float: left;
+				margin-left: 20px;
 			}
 		</style>
 	</head>
 	<div id="flash">
-		<img src="http://demo.jb51.net/js/2018/html5-css3-3d-img-flash-codes/images/Guardians-of-the-Galaxy-Poster-High-Res.jpg" alt="" style="display: block">
-		<img src="http://demo.jb51.net/js/2018/html5-css3-3d-img-flash-codes/images/Blade-Runner-poster-art-Harrison-Ford.jpg" alt="">
-		<img src="http://demo.jb51.net/js/2018/html5-css3-3d-img-flash-codes/images/2017_alien_covenant_4k-5120x2880-1920x1080.jpg" alt="">
-		<img src="http://demo.jb51.net/js/2018/html5-css3-3d-img-flash-codes/images/robocop-1987-wallpaper-2.jpg" alt="">
-		<img src="http://demo.jb51.net/js/2018/html5-css3-3d-img-flash-codes/images/sJALsDXak4EehSg2F2y92rt5hPe.jpg" alt="">
+		<img src="" alt="" style="display: block">
+		<img src="" alt="">
+		<img src="" alt="">
+		<img src="" alt="">
+		<img src="" alt="">
 		<ul>
 			<li class="li_1"></li>
 			<li></li>
@@ -120,12 +125,7 @@
 			<li></li>
 			<li></li>
 		</ul>
-		<div class="span-r">
-			<span>></span>
-		</div>
-		<div class="span-l">
-			<span><</span>
-		</div>
+
 	</div>
 
 	<body>
@@ -190,6 +190,33 @@
 				reverse(); /*重新设置函数*/
 			}
 		</script>
+		<div class="middle">
+			<h1>陋室不陋</h1>
+		</br>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;孔子的仁说，体现了人道精神。
+				孔子的礼说，则体现了礼制精神，即现代意义上的秩序和制度。人道主义这是人类永恒的主题，
+				对于任何社会，任何时代，任何一个政府都是适用的，而秩序和制度社会则是建立人类文明社会的基本要求。
+				孔子的这种人道主义和秩序精神是中国古代社会政治思想的精华。</p>
+			<a href="#"><button>LEARN MORE</button></a>
+		</div>
+		<div class="body">
+			<div class="box1">
+				<div class="img"><img style="width: 380px"src="img/孔子.jpg" /> </div>
+				<div class="text">
+					<h3>食不厌精，脍不厌细</h3>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“食不厌精，脍不厌细。食饐而洁，鱼馁而肉败不食；色恶不食；恶臭不食；失饪不食；割不正不食；不得其酱不食；肉虽多，不使胜食气；唯酒无量，不及乱；沽酒市脯不食，不撤姜食，不多食；祭于公，不宿肉；祭肉，不出三日，出三日，不食之矣。”
+					</p>
+				</div>
+			</div>
+			<div class="box2">
+				<div class="img"><img style="width: 380px"src="img/孔子.jpg" /> </div>
+				<div class="text">
+					<h3>食不厌精，脍不厌细</h3>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“食不厌精，脍不厌细。食饐而洁，鱼馁而肉败不食；色恶不食；恶臭不食；失饪不食；割不正不食；不得其酱不食；肉虽多，不使胜食气；唯酒无量，不及乱；沽酒市脯不食，不撤姜食，不多食；祭于公，不宿肉；祭肉，不出三日，出三日，不食之矣。”
+					</p>
+				</div>
+			</div>
+		</div>
 	</body>
 
 </html>

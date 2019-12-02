@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>孔子故里线上一条街</title>
+		<script src="jquery.js"></script>
+	</head>
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+			text-decoration: none;
+		}
+		
+		.jie-body {
+			width: 880px;
+			margin: 0 auto;
+		}
+		
+		.service {
+			margin-left: 20px;
+			margin-top: 20px;
+			background-color: #B22222;
+		}
+		
+		#flash {
+			/*根据图片的大小来设置外层div的大小*/
+			width: 880px;
+			height: 400px;
+			margin: 0 auto;
+			position: relative;
+			/*设置div定位，方便之后图片及圆点位置的设定*/
+			border: 1px solid black;
+		}
+		
+		#flash img {
+			cursor: pointer;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			/*设置所有图片重叠*/
+			left: 0px;
+			top: 0px;
+			display: none;
+			/*设置所有图片隐藏，通过改变第一个图片的行间样式来使第一个图片显示*/
+		}
+		
+		img hover: {
+			transform: scale(2.3);
+		}
+		
+		#flash ul {
+			width: 150px;
+			height: 25px;
+			border-radius: 20px;
+			background-color: #000000;
+			/*这是哪个小圆点所在小条的颜色*/
+			position: absolute;
+			left: 35%;
+			bottom: 10%;
+		}
+		
+		#flash ul li {
+			width: 12px;
+			height: 12px;
+			margin-top: 5px;
+			background-color: #fff;
+			/*小圆点的形状 颜色*/
+			border-radius: 50%;
+			margin-left: 15px;
+			float: left;
+		}
+		
+		#flash ul .li_1 {
+			background-color: #f40;
+			/*设置第一个圆点背景色为红色*/
+		}
+		
+		#flash .span-r {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			position: absolute;
+			right: 2%;
+			top: 45%;
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+		
+		#flash .span-r span {
+			width: 100%;
+			height: 100%;
+			color: rgba(0, 0, 0, 0.5);
+			font-size: xx-large;
+			font-weight: 700;
+			line-height: 50px;
+			margin-left: 15px;
+			cursor: pointer;
+		}
+		
+		#flash .span-l {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			position: absolute;
+			left: 2%;
+			top: 45%;
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+		
+		#flash .span-l span {
+			width: 100%;
+			height: 100%;
+			color: rgba(0, 0, 0, 0.5);
+			font-size: xx-large;
+			font-weight: 700;
+			line-height: 50px;
+			margin-left: 15px;
+			cursor: pointer;
+		}
+		
+		.wenhua {
+			margin: 0 auto;
+			max-width: 1060px;
+		}
+		
+		.ul-wenhua {
+			margin: 0 -1.5%;
+		}
+		
+		.li-wenhua {
+			float: left;
+			width: 31.33%;
+			margin: 10px 1%;
+			list-style: none;
+		}
+		
+		h3 {
+			font-size: 20px;
+			margin: 5px 0 10px;
+		}
+		
+		.port {
+			float: left;
+			width: 100%;
+			position: relative;
+			overflow: hidden;
+			text-align: center;
+			border: 2px solid rgba(255, 255, 255, 0.9);
+		}
+		
+		.text {
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: #fff;
+			height: 100%;
+			opacity: 0;
+			width: 100px;
+		}
+		
+		.port.text {
+			width: 100px;
+			opacity: 0.9;
+			top: -100%;
+			transition: 0.5s;
+			padding: 45px 20px 20px
+		}
+		
+		.port img {
+			transition: 0.5s;
+			width: 285px;
+			height: 205px;
+		}
+		
+		.port:hover img {
+			transform: scale(1.2);
+			opacity: 0.25;
+		}
+		
+		.port:hover .text {
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: darkgray;
+			height: 100%;
+			opacity: 5;
+			transform: scale(1.2);
+			width: 100%;
+			padding: 20px;
+		}
+		
+		.li {
+			color: #FFFFFF;
+			display: inline;
+		}
+		
+		.btn- {
+			display: inline-block;
+			padding: 5px 10px;
+			margin-top: 5px;
+			font-size: 14px;
+			color: #fff;
+			border: 2px solid #B22222 ;
+			background-color:  #B22222 ;
+			text-decoration: none;
+			transition: 0.4s;
+		}
+		
+		.btn-:hover {
+			background-color: transparent;
+			color: #B22222 ;
+			transition: 0.4s;
+		}
+	</style>
+
+	<body bgcolor="#000000">
+
+		<div class="jie-body">
+			<!--<div class="service">
+				<ul class="ul">
+					<li class="li">匠心之打造</li>
+					<li class="li">孔家之精致</li>
+					<li class="li">古籍说话啦</li>
+					<li class="li">孔家都玩啥</li>
+					<li class="li">孔家都吃啥</li>
+				</ul>
+			</div>-->
+			<div class="pic">
+
+			</div>
+			<div class="daohang">
+				<div class="eatd">
+					<img />
+				</div>
+				<!--添加工匠、古玩-->
+				<div id="flash">
+					<img src=" img/古玩.jpg" alt="" style="display: block">
+					<img src="img/孔子花器.jpg" alt="">
+					<img src="img/孔子家具.jpg" alt="">
+					<img src="img/孔子玉器.jpg" alt="">
+					<img src="img/孔子图画.jpg" alt="">
+					<ul>
+						<li class="li_1"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="span-r">
+						<span>></span>
+					</div>
+					<div class="span-l">
+						<span><</span>
+					</div>
+				</div>
+
+				<div class="wenhua">
+
+					<ul class="ul-wenhua">
+						<li class="li-wenhua">
+							<div class="port">
+								<div class="img-port">
+									<img src="img/孔府菜.jpeg" />
+								</div>
+								<div class="text">
+									<h3>箪食瓢饮</h3>
+									<p>这里是虚拟的小吃街。</br>在网上都找不到曲阜小吃</br>街的图片...</br>需要寻找真正会做孔府</br>宴的老师傅呀。</p>
+									<a class="btn" href="街1.html"><button class="btn-">来呀~</button></a>
+								</div>
+							</div>
+						</li>
+						<li class="li-wenhua">
+							<div class="port">
+								<div class="img-port">
+									<img src="img/Q版孔子.jpg" />
+								</div>
+								<div class="text">
+									<h3>因戳斯汀</h3>
+									<p>文创产品创意街！</br>孔子及其弟子的周边不香吗？</br>古玩与文创咋不能搞到一块了？</p>
+									<a class="btn" href="街2.html"><button class="btn-">客官~</button></a>
+								</div>
+							</div>
+						</li>
+						<li class="li-wenhua">
+							<div class="port">
+								<div class="img-port">
+									<img src="img/博物馆.png" />
+								</div>
+								<div class="text">
+									<h3>陋室不陋</h3>
+									<p>怎能少的了文化呢？</br>这里是一道文化长廊，</br>虚拟的3D博物馆</p>
+									<a class="btn" href="街3.html"><button class="btn-">您请进~</button> </a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			    <div class="jq">
+			    	<a href="jq.html"><button class="btn-">移动端</button> </a>
+			    </div>
+			</div>
+
+		</div>
+		<script>
+			var div = document.getElementById('flash');
+			var img = div.getElementsByTagName('img'); /*选中div下所有的图片*/
+			var ul = document.getElementsByTagName('ul')[0];
+			var li = ul.getElementsByTagName('li');
+			var div_r = document.getElementsByTagName('div')[1];
+			// var span_r = div_r.getElementsByTagName('span');
+			var div_l = document.getElementsByTagName('div')[2];
+			// var sapn_l = div_l.getElementsByTagName('span');
+			var len = img.length;
+			var count = 0; /*设置count来显示当前图片的序号*/
+			function run() { /*将定时器里的函数提取到外部*/
+				count++;
+				count = count == 5 ? 0 : count; /*当图片加载到最后一张时，使其归零*/
+				for(var i = 0; i < len; i++) {
+					img[i].style.display = 'none'; /*利用for循环使除当前count位其他图片隐藏*/
+				}
+				img[count].style.display = 'block'; /*显示当前count的值所代表的图片*/
+				for(var i = 0; i < li.length; i++) {
+					li[i].style.backgroundColor = "#fff"; /*原理同上*/
+				}
+				li[count].style.backgroundColor = "#f40";
+			}
+			var timer = setInterval(run, 10000); /*定义定时器，使图片每隔1s更换一次*/
+			div.onmouseover = function() {
+				clearInterval(timer);
+			}
+			div.onmouseleave = function() { /*定义鼠标移出事件，当鼠标移出div区域，轮播继续*/
+				timer = setInterval(run, 1000);
+			}
+			for(var i = 0; i < len; i++) {
+				li[i].index = i; /*定义index记录当前鼠标在li的位置*/
+				li[i].onmouseenter = function() { /*定义鼠标经过事件*/
+					for(var i = 0; i < len; i++) { /*通过for循环将所有图片隐藏，圆点背景设为白色*/
+						li[i].style.background = '#fff';
+						img[i].style.display = 'none';
+					}
+					this.style.background = '#f40'; /*设置当前所指圆点的背景色*/
+					img[this.index].style.display = 'block'; /*使圆点对应的图片显示*/
+				}
+			}
+			div_r.onclick = function() { /*因为span没有设置宽高，直接把事件添加到他的父级*/
+				run(); /*直接调用现成的run函数*/
+			}
+
+			function reverse() {
+				count--;
+				count = count == -1 ? 4 : count;
+				for(var i = 0; i < len; i++) {
+					img[i].style.display = 'none'; /*利用for循环使除当前count位其他图片隐藏*/
+				}
+				img[count].style.display = 'block'; /*显示当前count的值所代表的图片*/
+				for(var i = 0; i < li.length; i++) {
+					li[i].style.backgroundColor = "#fff"; /*原理同上*/
+				}
+				li[count].style.backgroundColor = "#f40";
+			}
+			div_l.onclick = function() {
+				reverse(); /*重新设置函数*/
+			}
+		</script>
+	</body>
+
+</html>
